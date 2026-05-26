@@ -1,0 +1,21 @@
+{
+  "name": "sort-merge-join-distributed",
+  "version": "1.0.0",
+  "description": "Topic 19: Sort-Merge Join for Distributed Sites - Book-Authors",
+  "main": "run_all.js",
+  "scripts": {
+    "prepare": "node prepare_data.js",
+    "site1": "node site1/server.js",
+    "site2": "node site2/server.js",
+    "site3": "node site3/server.js",
+    "start": "node run_all.js",
+    "benchmark": "node benchmark.js"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.0",
+    "csv-stringify": "^6.4.0",
+    "express": "^4.18.2",
+    "axios": "^1.6.0",
+    "cors": "^2.8.5"
+  }
+}

@@ -1,0 +1,5 @@
+node_modules/
+site1/data/
+site2/data/
+site3/results/
+*.pdf
