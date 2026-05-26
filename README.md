@@ -66,5 +66,3 @@ CSDLPT/
 | HTTP Client | Axios |
 | Data Format | CSV |
 | Communication | REST API (HTTP) |
-
-This project is for educational purposes — Distributed Database course final project.
