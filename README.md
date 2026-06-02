@@ -49,7 +49,6 @@ CSDLPT/
 ├── site1/server.js        # Books Site (port 5001)
 ├── site2/server.js        # Authors Site (port 5002)
 ├── site3/server.js        # Coordinator (port 5003)
-└── docs/                  # Tai lieu (proposal, design, analysis)
 ```
 
 ## Dataset
@@ -66,3 +65,8 @@ CSDLPT/
 | HTTP Client | Axios |
 | Data Format | CSV |
 | Communication | REST API (HTTP) |
+
+## Members
+- **Thành viên thực hiện** : Nguyễn Hữu Đạt
+- **MSSV** : N23DCCN077
+- **Môn học**: Cơ sở dữ liệu phân tán
