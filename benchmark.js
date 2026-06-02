@@ -24,9 +24,9 @@ async function checkSites() {
   for (const [name, url] of [['Site 1', SITE1], ['Site 2', SITE2], ['Site 3', SITE3]]) {
     try {
       const res = await axios.get(`${url}/status`);
-      console.log(`   ✅ ${name}: ${res.data.status} (${res.data.records || 'coordinator'} records)`);
+      console.log(`    ${name}: ${res.data.status} (${res.data.records || 'coordinator'} records)`);
     } catch (err) {
-      console.error(`   ❌ ${name} OFFLINE — Hãy chạy "node run_all.js" trước!`);
+      console.error(`    ${name} OFFLINE — Hãy chạy "node run_all.js" trước!`);
       process.exit(1);
     }
   }
@@ -234,7 +234,7 @@ async function runBenchmark() {
   try {
     await axios.post(`${SITE3}/save-benchmark`, summary);
   } catch (err) {
-    console.error('⚠️  Không thể lưu benchmark report');
+    console.error(' Không thể lưu benchmark report');
   }
 
   // In kết quả
