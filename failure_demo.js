@@ -114,7 +114,7 @@ async function requestWithRetry(method, url, data, siteName) {
 // Sort-Merge Join VỚI Failure Handling
 // ============================================================
 async function sortMergeJoinWithFailureHandling(strategy) {
-  log(`\n🔄 Bắt đầu Sort-Merge Join — Strategy ${strategy}...`);
+  log(`\n Bắt đầu Sort-Merge Join — Strategy ${strategy}...`);
   const totalStart = Date.now();
 
   // Bước 1: Health check trước khi bắt đầu
@@ -331,7 +331,7 @@ async function demo() {
   const recoveryResult = await sortMergeJoinWithFailureHandling('B');
   
   if (recoveryResult.success) {
-    log(`\n📊 RECOVERY THÀNH CÔNG! ${recoveryResult.count} records joined trong ${recoveryResult.total_ms}ms`);
+    log(`\n RECOVERY THÀNH CÔNG! ${recoveryResult.count} records joined trong ${recoveryResult.total_ms}ms`);
   }
   
   await sleep(2000);
@@ -354,7 +354,7 @@ async function demo() {
   ]);
 
   if (!sortBooks.success || !sortAuthors.success) {
-    log('❌ Không thể sort — bỏ qua Scenario 4');
+    log(' Không thể sort — bỏ qua Scenario 4');
   } else {
     // Bước 2: Gây delay cho Site 2 SAU KHI đã sort xong
     log('\n Bật delay 10s cho Site 2 (ảnh hưởng merge-join endpoint)...');
@@ -413,7 +413,7 @@ async function demo() {
   console.log(`│  1. Normal operation             │  Success    │ ${String(normalResult.total_ms).padStart(6)}ms  │`);
   console.log(`│  2. Site 2 crash → detected      │ Detected   │ ${String(failResult.total_ms).padStart(6)}ms  │`);
   console.log(`│  3. Recovery after restart       │ Success    │ ${String(recoveryResult.total_ms).padStart(6)}ms  │`);
-  console.log(`│  4. Fallback: A timeout → B ok   │ ${fallbackResult.success ? ' Fallback OK' : '❌ Failed     '} │ ${String(fallbackResult.total_ms).padStart(6)}ms  │`);
+  console.log(`│  4. Fallback: A timeout → B ok   │ ${fallbackResult.success ? ' Fallback OK' : ' Failed     '} │ ${String(fallbackResult.total_ms).padStart(6)}ms  │`);
   console.log('└──────────────────────────────────────────────────────────────┘');
   
   console.log('\n Kết luận:');
